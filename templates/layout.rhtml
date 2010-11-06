@@ -5,14 +5,23 @@
     <link rel="alternate" type="application/atom+xml" title="<%= title %> - feed" href="/index.xml" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
     <title><%= title %></title>
+    <script type="text/javascript" src="http://use.typekit.com/vbr1nkr.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
-    <section>
-      <%= yield %> 
-    </section>
+    
+    <div class="wrap">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
+    
     <footer>
-      powered by <a href="http://cloudhead.io/toto">toto</a>
+      <div class="container">
+        powered by <a href="http://cloudhead.io/toto">toto</a>
+      </div>
     </footer>
+    
   </body>
 </html>
 
