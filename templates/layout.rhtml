@@ -7,21 +7,24 @@
     <title><%= title %></title>
     <script type="text/javascript" src="http://use.typekit.com/vbr1nkr.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src="http://code.jquery.com/jquery-1.4.3.min.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="/js/main.js" type="text/javascript" charset="UTF-8"></script>
   </head>
   <body>
     
     <div class="wrap">
       <div class="container">
+        
         <%= yield %>
+        
       </div>
     </div>
     
     <footer>
-      <div class="container">
-        powered by <a href="http://cloudhead.io/toto">toto</a>
+      <div class="container copyright">
+        <p><span>&copy;</span> Copyright <%= Time.now.year %> Joshua Ogle. All rights reserved unless otherwise noted. Powered by <a href="http://cloudhead.io/toto">toto</a>. You can fork the code <a href="http://github.com/joshuaogle">on Github</a>.</p>
       </div>
     </footer>
     
   </body>
 </html>
-
