@@ -1,20 +1,60 @@
-<article class="post">
+<div class="content">
+  <article class="post">
 
-  <section class="body">
-    <h1>
-      <%= title %>
-      <span class="date"><%= date %></span>
-    </h1>
-    <%= body %>
+    <section class="body">
+      <h1>
+        <%= title %>
+        <span class="date"><%= date %></span>
+      </h1>
+      <%= body %>
+    </section>
+
+    <section class="post-meta">
+      <% if article[:tags] %>
+        <% article[:tags].split(", ").each do |tag| %>
+          <a href="/tags/<%= tag %>"><%= tag %></a>
+        <% end %>
+      <% end %>
+    </section>
+
+    <section class="comments">
+      <% if @config[:disqus] %>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript" src="http://disqus.com/forums/<%= @config[:disqus] %>/embed.js"> </script>
+        <noscript><a href="http://<%= @config[:disqus] %>.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+      <% end %>
+    </section>
+  </article>
+</div>
+
+<aside>
+  <section class="about">
+    <h2>About Joshua</h2>
+    <p><b>Joshua Ogle</b> is a creative developer based in Oklahoma City specializing in user interface design. He is a web standards evengelist, and is involved .</p>
   </section>
-
-  <section class="comments">
-    <% if @config[:disqus] %>
-      <div id="disqus_thread"></div>
-      <script type="text/javascript" src="http://disqus.com/forums/<%= @config[:disqus] %>/embed.js"> </script>
-      <noscript><a href="http://<%= @config[:disqus] %>.disqus.com/?url=ref">View the discussion thread.</a></noscript>
-      <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-    <% end %>
+  <section class="social">
+    <h2>Social</h2>
+    <p>links</p>
+    <h3>Latest Tweet</h3>
+    <p class="tweet">
+      &quot;<span id="twitter_status">Loading...</span>&quot;<br/><i id="twitter_status_time"></i>
+      <script type="text/javascript" src="http://www.twitter.com/statuses/user_timeline/joshuaogle.json?callback=twitterCallback&count=5"></script>
+    </p>
   </section>
-</article>
+  <section class="contact">
+    <h2>My other projects</h2>
+    <p>Keynot.es</p>
+  </section>
+  <section class="contact">
+    <h2>Contact</h2>
+  </section>
+</aside>
 
+<nav>
+  <ul>
+    <li><a href="/portfolio">Portfolio</a></li>
+    <li><a href="/archives">Articles</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+</nav>

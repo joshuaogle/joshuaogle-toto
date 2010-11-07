@@ -1,11 +1,7 @@
-<section class="feature">
-  Feature
-</section>
-
 <div class="content">
 
     <section class="articles-preview">
-      <% @articles.select {|a| a[:category] == 'article' }[0...4].each do |article| %>
+      <% @articles.select {|a| a[:category] == 'portfolio' }[0...4].each do |article| %>
         <article class="post">
           <a href="<%= article.path %>">
             <span class="title"><%= article.title %></span>
@@ -20,25 +16,20 @@
 <aside>
   <section class="about">
     <h2>About Joshua</h2>
-    <p>Joshua Ogle is a creative developer based in Oklahoma City specializing in user interface design. He is a web standards evengelist, and is involved .</p>
+    <p><b>Joshua Ogle</b> is a creative developer based in Oklahoma City specializing in user interface design. He is a web standards evengelist, and is involved .</p>
   </section>
   <section class="social">
     <h2>Social</h2>
-		<ul class="social-icons">
-			<li><a class="social-icon-twitter" href="http://twitter.com/joshuaogle" title="Twitter">Twitter</a></li>
-			<li><a class="social-icon-linkedin" href="http://linkedin.com/in/joshuaogle" title="Linkedin">Linkedin</a></li>
-			<li><a class="social-icon-flickr" href="http://flickr.com/photos/26295202@N05/" title="Linkedin">Flickr</a></li>
-			<li><a class="social-icon-delicious" href="http://delicious.com/joshuaogle" title="Delicious">Delicious</a></li>
-			<li><a class="social-icon-rdio" href="http://www.rdio.com/#/people/joshuaogle/" title="Rdio">Rdio</a>
-		</ul>
+    <p>links</p>
+    <h3>Latest Tweet</h3>
     <p class="tweet">
       &quot;<span id="twitter_status">Loading...</span>&quot;<br/><i id="twitter_status_time"></i>
       <script type="text/javascript" src="http://www.twitter.com/statuses/user_timeline/joshuaogle.json?callback=twitterCallback&count=5"></script>
     </p>
   </section>
-  <section class="projects">
+  <section class="contact">
     <h2>My other projects</h2>
-    <p><a class="logo-keynotes" href="http://keynot.es">Keynot.es</a></p>
+    <p>Keynot.es</p>
   </section>
   <section class="contact">
     <h2>Contact</h2>
