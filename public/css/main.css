@@ -8,7 +8,6 @@ Styleguide:
 	
 */
 @import url("http://html5resetcss.googlecode.com/files/html5reset-1.4.1.css");
-@import url("css/nivo-slider.css");
 
 /** BASICS **/
 	* { margin: 0; padding: 0; }
@@ -39,10 +38,11 @@ Styleguide:
 	.third { float: left; width: 33.333%; }
 	
 /** TYPOGRAPHY **/
-	a { color: #e24b00; font-weight: normal; text-decoration: none; padding: 0 2px; margin: 0 -2px;
+	a { color: #e24b00; font-weight: normal; text-decoration: none; padding: 0 .1em; margin: 0 -.1em;
 		-webkit-transition: all .15s linear; transition: all .15s linear; }
 		a, a * { cursor:pointer; }
-		a:hover { color: #fff; text-decoration: none; background: #1d1d1d; }
+		a:hover { color: #fff; text-decoration: none; background: #1d1d1d;
+			border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 		a:active { outline: 0 none; position: relative; top: 1px; }
 	
 	ul, li { padding: 0; margin: 0; list-style: none; display: block; }
@@ -61,11 +61,9 @@ Styleguide:
 	aside h2 { font-size: 1.2em; line-height: 1.2em; padding-top: 0.9em; }
 	aside h3 { font-size: 1.0em; line-height: 1.0em; padding-top: 1.1em; }
 	aside h4 { font-size: 0.8em; line-height: 0.8em; padding-top: 1.2em; }
-	.title, nav a { font-size: 1.4em; font-family: "adelle-1","adelle-2",serif; display: inline-block; }
-	nav a { padding-top: .25em; font-size: 120%; margin: .7em 0; }
+	.title { font-size: 1.4em; font-family: "adelle-1","adelle-2",serif; display: inline-block; }
 	
 	p { padding: 5px 10px; margin: 0; clear: both; }
-	
 	
 	.articles-preview article, aside section { border-bottom: 1px solid #1a1a1a;
 		 -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.05); -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.05); box-shadow: 0 1px 0 rgba(255,255,255,0.05); }
@@ -77,10 +75,25 @@ Styleguide:
 		border: 2px solid #ccc; padding: 5px 10px; outline: none; }
 
 /** NAV **/
+	nav { position: fixed; left: 72%; width: 25%; }
+		body.home nav { position: absolute; z-index: 1; top: 515px; }
+	nav .logo a { height: 50px; width: 50px; display: block; text-indent: -9999px; background: url("/images/logo-feature.png") no-repeat; }
 	nav ul, nav ul li { padding: 0; }
+	nav li a { font-size: 1.4em; font-family: "adelle-1","adelle-2",serif; display: inline-block; padding-top: .25em; font-size: 120%; margin: .35em 0; }
 
 /** HOME **/
-	.feature { clear: both; width: 100%; height: 200px; background: #2a2a2a; }
+	.feature { clear: both; width: 100%; height: 480px; background: #2b2a29; border-bottom: 5px solid #1d1d1d; }
+		.feature .logo { height: 50px; width: 50px; display: block; margin: 0 auto 20px; text-indent: -9999px; background: url("/images/logo-feature.png") no-repeat; }
+		.feature-text { font-size: 3em; line-height: 1.2em; color: #666; font-family: "adelle-1","adelle-2",serif;
+			float: left; display: block; width: 35%; margin: 20px 2%; }
+			.feature-text em { color: #ddd; font-style: normal; display: block; }
+			.feature-text a { display: inline-block; }
+		.feature-examples { width: 61%; height: 500px; float: left; position: relative; z-index: 1; overflow: hidden; }
+			.example-desktop { position: absolute; z-index: 2; left: 0; display: block; width: 500px; height: 480px; margin: 20px 20px 0;
+				background: url("/images/example-desktop.png") no-repeat; }
+			.example-iphone { position: absolute; z-index: 3; right: 0; display: block; width: 250px; height: 500px;
+				background: url("/images/example-iphone.png") no-repeat; }
+	
 	.articles-preview { overflow: visible; }
 	.articles-preview a { display: block; padding: 10px; }
 	.articles-preview a .body { display: block; color: #aaa; padding-top: 3px; }
@@ -108,7 +121,7 @@ Styleguide:
 		.icon.icon-ask { background: url("/images/icon_ask.png") top center no-repeat; }
 		.icon.icon-notes { background: url("/images/icon_notes.png") top center no-repeat; }
 		
-	.box, .social-icons li { background: #1a1a1a; margin: 10px 0 0 10px; padding: 10px; word-wrap: break-word; position: relative;
+	.box, .social-icons li { background: #1c1b1a; margin: 10px 0 0 10px; padding: 10px; word-wrap: break-word; position: relative;
 		border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
 		-moz-box-shadow: -1px 1px 0 rgba(255,255,255,.1); -webkit-box-shadow: -1px 1px 0 rgba(255,255,255,.1); }
 		
@@ -117,7 +130,7 @@ Styleguide:
 /** ABOUT **/
 	.social-icons { margin: 0 10px; }
 	.social-icons li { float: left; padding: 0; margin: 0 0 10px 5px; z-index: 1; overflow: visible; }
-		.social-icons li, .social-icons a { height: 34px; width: 36px; display:block; position: relative; }
+		.social-icons li, .social-icons a { height: 34px; width: 38px; display:block; position: relative; }
 		.social-icons a { text-indent: -9999px; background: url("/images/social-icons.png") no-repeat; }
 		.social-icons a.social-icon-facebook { background-position: -40px 0; }
 		.social-icons a.social-icon-linkedin { background-position: -80px 0; }
@@ -131,7 +144,7 @@ Styleguide:
 	.profile-picture { width: 200px; height: 200px; display: block; background: url("/images/profile.png");
 		-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.25); -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.25); }
 		.home .profile-picture { width: 100px; height: 100px; background: url("/images/profile2.jpg"); }
-	#twitter_status_time {font-size: 11px; color: #777; font-style:normal; }
+	#twitter_status_time {font-size: 11px; color: #444; font-style:normal; }
 	
 /** FORMS **/
 	fieldset { margin: 0; padding:0; }
@@ -139,7 +152,7 @@ Styleguide:
 		-moz-border-radius: 5px; -webkit-border-radius: 5px; }
 		.button:hover { color: #fff; }
 		.button-small { padding: 0 7px; margin: 2px 0; font-size: 9px; }
-		.content .button:hover { background: #333; }
+		.content .button:hover { background: #1d1d1d; }
 	.form-text, .form-textarea { background: #fff; border: none; padding: 5px 10px;
 		-moz-border-radius: 5px; -webkit-border-radius: 5px; }
 		
@@ -152,14 +165,12 @@ Styleguide:
 	html, body { height: 100%; }
 	/** Sticky Footer **/
 		.wrap { min-height: 100%; height: auto !important; height: 100%; overflow: auto; padding-bottom: 50px; margin-bottom: -50px; border-left: 10px solid #4d6d80; }
-
-
 	
 
 /* @group Layouts for resolutions */
 
 @media screen and (min-width: 1200px) {
-	.container { width: 1160px; padding: 0 20px; }
+	.container { width: 1160px; }
 }
 
 /*layouts larger than 768px*/
