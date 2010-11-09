@@ -193,7 +193,7 @@ Styleguide:
 
 
 /*layouts smaller than 600px, iPhone and mobiles*/
-@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 600px)  {
+@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 600px),  {
 	.content, aside, nav, .feature-text { width: auto; margin: 0; float: none; }
 	.content { padding-bottom: 50px; }
 	nav, body.home nav { position: absolute; top: 0; left: 20px; right: 0; float: none;  }
@@ -209,10 +209,10 @@ Styleguide:
 	.feature-examples .example-iphone { left: 30%; }
 }
 	
-/*Just iPhone*/
+/*Just iPhone
 @media only screen and (max-device-width: 480px) {
 }
-
+*/
 /*layouts larger than 768px*/
 @media screen and (min-width: 768px) {
 	.feature-text { font-size: 2em; }
