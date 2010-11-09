@@ -1,6 +1,5 @@
 <section class="feature">
   <span class="feature-text">
-    <span class="logo">O</span>
     <em>Hey there.</em>
     I help make the web <a href="/portfolio">better</a> for humans. I also write <a href="/archives">articles</a> and give <a href="/speaking">talks</a> about how to do it.
   </span>
@@ -12,12 +11,30 @@
 
 <div class="content">
 
-    <section class="articles-preview">
-      <% @articles.select {|a| a[:category] == 'article' }[0...4].each do |article| %>
+    <section class="articles">
+      <% @articles.select {|a| a[:category] == 'article' || 'portfolio' }[0...4].each do |article| %>
         <article class="post">
           <a href="<%= article.path %>">
-            <span class="title"><%= article.title %></span>
-            <span class="body"><%= article.summary.gsub(/<\/?[^>]*>/, "") %></span>
+            <span class="title">
+              <p>
+                <%= article.title %><br/>
+                <span class="date"><%= article.date %></span>
+              </p>
+            </span>
+            <span class="body">
+                <%= article.summary.gsub(/<\/?[^>]*>/, "") if article.category == "article" %>
+                <% if article.category == "portfolio" %>
+                  <span class="gallery">
+                      <% if article[:desktop] %>
+                        <img src="/portfolio/desktop/<%= article[:desktop].split(", ").first %>">
+                      <% elsif article[:logo] %>
+                        <img src="/portfolio/logo/<%= article[:logo].split(", ").first %>">
+                      <% elsif article[:mobile]%>
+                        <img src="/portfolio/mobile/<%= article[:mobile].split(", ").first %>">
+                      <% end %>
+                  </span>
+                <% end %>                  
+            </span>
           </a>
         </article>
       <% end %>
@@ -46,7 +63,11 @@
   </section>
   <section class="projects">
     <h2>My other projects</h2>
-    <p><a class="logo-keynotes" href="http://keynot.es">Keynot.es</a></p>
+    <p>
+      <a class="logo-wimgo" href="http://wimgo.com">wimgo</a>
+      <a class="logo-keynotes" href="http://keynot.es">Keynot.es</a>
+      <a class="logo-brightbit" href="http://brightb.it">Brightbit</a>
+    </p>
   </section>
   <section class="contact">
     <h2>Contact</h2>
