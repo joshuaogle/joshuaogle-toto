@@ -5,59 +5,72 @@
       
       <h1>
         <%= title %>
-        <span class="date"><%= date %></span>
+        <span class="date date-relative" data-date-stamp="<%= article[:date] %>"><%= date %></span>
       </h1>
 
-        <% if article[:logo] %>
-          <% article[:logo].split(", ").each do |gallery| %>
-            <img src="/portfolio/logo/<%= gallery %>">
-          <% end %>
+      <% if article[:logo] %>
+        <% article[:logo].split(", ").each do |gallery| %>
+          <img src="/portfolio/logo/<%= gallery %>">
         <% end %>
+      <% end %>
 
-        <% if article[:mobile] %>
-          <% article[:mobile].split(", ").each do |gallery| %>
-            <img src="/portfolio/mobile/<%= gallery %>" width="50%">
-          <% end %>
+      <% if article[:mobile] %>
+        <% article[:mobile].split(", ").each do |gallery| %>
+          <img src="/portfolio/mobile/<%= gallery %>" width="50%">
         <% end %>
-      
-        <% if article[:desktop] %>
-          <% article[:desktop].split(", ").each do |gallery| %>
-            <img src="/portfolio/desktop/<%= gallery %>" width="100%">
-          <% end %>
+      <% end %>
+    
+      <% if article[:desktop] %>
+        <% article[:desktop].split(", ").each do |gallery| %>
+          <img src="/portfolio/desktop/<%= gallery %>" width="100%">
         <% end %>
+      <% end %>
         
       <%= body if body %>
       
     </section>
 
-    <section class="post-meta">
+    <section class="post-meta clearfix">
       <% if article[:tags] %>
-        <% article[:tags].split(", ").each do |tag| %>
-          <a href="/tags/<%= tag %>"><%= tag %></a>
-        <% end %>
+        <p class="f-left">
+          <label>Tagged:</label> 
+          <% article[:tags].split(", ").each do |tag| %>
+           <%= tag %><%= ", " unless tag == article[:tags].split(", ").last %>
+          <% end %>
+        </p>
+      <% end %>
+      <% if article[:client] %>
+        <p class="f-left">
+          <label>Client:</label>
+          <%= article[:client] %>
+        </p>
       <% end %>
     </section>
+
 
     <section class="comments">
       <% if @config[:disqus] %>
         <div id="disqus_thread"></div>
-        <script type="text/javascript" src="http://disqus.com/forums/<%= @config[:disqus] %>/embed.js"> </script>
         <noscript><a href="http://<%= @config[:disqus] %>.disqus.com/?url=ref">View the discussion thread.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
       <% end %>
     </section>
+    
   </article>
 </div>
 
 <aside>
   <section class="related">
-    <h2>Other <%= "Articles" if article[:category] == "article" %><%= "Posts" if article[:category] == "portfolio" %></h2>
+    <h2><%= "Other Articles" if article[:category] == "article" %><%= "Elsewhere in the Portfolio" if article[:category] == "portfolio" %></h2>
     <% @articles.select {|a| a[:category] == article[:category] }[0...4].each do |article| %>
         <p>
-          <a href="<%= article.path %>">
+          <a class="title" href="<%= article.path %>">
             <%= article.title %>
           </a>  
         </p>
     <% end %>
+    <p>
+      <a class="button" href='<%= "/portfolio" if article[:category] == "portfolio" %><%= "/archives" if article[:category] == "article" %>'>More</a>
+    </p>
   </section>
 </aside>

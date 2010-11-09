@@ -4,24 +4,21 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="alternate" type="application/atom+xml" title="<%= title %> - feed" href="/index.xml" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
-    <title>Joshua Ogle | <% if title == "site" || "mnt" && @context[:articles] %><%# a horrible way to do this, fix it soon %>Designer and Developer in Oklahoma City, Oklaohma<% else %><%= title %><% end %></title>
+    <title>Joshua Ogle | <% if (title == "site" || "mnt") && @context[:articles] %><%# a horrible way to do this, fix it soon %>Designer and Developer in Oklahoma City, Oklaohma<% else %><%= title %><% end %></title>
     <meta name="description" content="Designer and Developer in Oklahoma City"> 
     <meta name="author" content="Joshua Ogle"> 
-    <meta name="apple-mobile-web-app-capable" content="yes"> 
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="shortcut icon" href="/images/favicon.ico"> 
     <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon.png">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
     <script type="text/javascript" src="http://use.typekit.com/vbr1nkr.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script src="http://code.jquery.com/jquery-1.4.3.min.js" type="text/javascript" charset="UTF-8"></script>
     <script src="/js/main.js" type="text/javascript" charset="UTF-8"></script>
   </head>
-  <body<% if title == "site" || "mnt" && @context[:articles] %><%# a horrible way to do this, fix it soon %> class="home"<% end %>>
+  <body<% if (title == "site" || "mnt") && @context[:articles] && @context[:archives] %><%# a horrible way to do this, fix it soon %> class="home"<% end %>>
     <nav class="navigation">
       <h1 class="logo"><a href="/">Joshua Ogle</a></h1>
       <ul>
-        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/projects">Portfolio</a></li>
         <li><a href="/archives">Articles</a></li>
         <li><a href="/speaking">Speaking</a></li>
         <li><a href="/about">About</a></li>
@@ -42,6 +39,6 @@
         <p><span>&copy;</span> Copyright <%= Time.now.year %> Joshua Ogle. All rights reserved unless otherwise noted. Powered by <a href="http://cloudhead.io/toto">toto</a>. You can fork the code <a href="http://github.com/joshuaogle">on Github</a>.</p>
       </div>
     </footer>
-    
+    <%= "x" if ENV['RACK_ENV'] != 'development' %>
   </body>
 </html>

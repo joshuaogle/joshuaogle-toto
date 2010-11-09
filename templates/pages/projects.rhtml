@@ -1,15 +1,30 @@
 <div class="content">
-  
+
   <hgroup>
     <h1>Articles</h2>
   </hgroup>
 
   <section class="articles">
-    <% @articles.select {|a| a[:category] == 'article' }[0...4].each do |article| %>
+    <% @articles.select {|a| a[:category] == 'portfolio' }.each do |article| %>
       <article class="post">
         <a href="<%= article.path %>">
-          <span class="title"><%= article.title %></span>
-          <span class="body"><%= article.summary.gsub(/<\/?[^>]*>/, "") %></span>
+          <span class="title">
+            <%= article.title %>
+            <span class="date"><%= article.date %></span>
+          </span>
+          <span class="body">
+            <% if article.category == "portfolio" %>
+              <span class="gallery">
+                  <% if article[:desktop] %>
+                    <img src="/portfolio/desktop/<%= article[:desktop].split(", ").first %>">
+                  <% elsif article[:logo] %>
+                    <img src="/portfolio/logo/<%= article[:logo].split(", ").first %>">
+                  <% elsif article[:mobile]%>
+                    <img src="/portfolio/mobile/<%= article[:mobile].split(", ").first %>">
+                  <% end %>
+              </span>
+            <% end %>
+          </span>
         </a>
       </article>
     <% end %>
@@ -38,4 +53,4 @@
   <section class="contact">
     <h2>Contact</h2>
   </section>
-</aside>
+</aside>  

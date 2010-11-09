@@ -20,7 +20,7 @@ toto = Toto::Server.new do
   # set :author,    "Joshua Ogle"                             # blog author
     set :title,     Dir.pwd.split('/').last                   # site title
   # set :root,      "index"                                   # page to load on /
-  # set :date,      lambda {|now| now.strftime("%d/%m/%Y") }  # date format for articles
+  # set :date,      lambda {|now| now.strftime("%b/%m/%Y") }  # date format for articles
   # set :markdown,  :smart                                    # use markdown + smart-mode
   # set :disqus,    "joshuaogle"                              # disqus id, or false
   # set :summary,   :max => 150, :delim => /~/                # length of article summary and delimiter
@@ -30,7 +30,7 @@ toto = Toto::Server.new do
   set :author, "Joshua Ogle"
   set :disqus, "joshuaogle"
   set :ext, 'html'
-  set :date, lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
+  set :date, lambda {|now| now.strftime("%b #{now.day.ordinal} %Y") }
 end
 
 run toto
