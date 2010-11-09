@@ -3,8 +3,9 @@
   <head>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="alternate" type="application/atom+xml" title="<%= title %> - feed" href="/index.xml" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
-    <title>Joshua Ogle | <% if (title == "site" || "mnt") && @context[:articles] %><%# a horrible way to do this, fix it soon %>Designer and Developer in Oklahoma City, Oklaohma<% else %><%= title %><% end %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+    <title>Joshua Ogle | <% if title == "site" || title == "mnt" && @context[:articles] %><%# a horrible way to do this, fix it soon %>Designer and Developer in Oklahoma City, Oklaohma<% else %><%= title %><% end %></title>
     <meta name="description" content="Designer and Developer in Oklahoma City"> 
     <meta name="author" content="Joshua Ogle"> 
     <link rel="shortcut icon" href="/images/favicon.ico"> 

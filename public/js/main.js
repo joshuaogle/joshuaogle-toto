@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	
+<script type="text/javascript" src="http://use.typekit.com/vbr1nkr.js"></script>
 	$.getScript("http://disqus.com/forums/joshuaogle/embed.js");
 });
 
