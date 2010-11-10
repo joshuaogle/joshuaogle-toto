@@ -62,13 +62,13 @@
 <aside>
   <section class="related">
     <h2><%= "Other Articles" if article[:category] == "article" %><%= "Elsewhere in the Portfolio" if article[:category] == "portfolio" %></h2>
+    <ul class="list-links">
     <% @articles.select {|a| a[:category] == article[:category] }[0...4].each do |article| %>
-        <p>
-          <a class="title" href="<%= article.path %>">
-            <%= article.title %>
-          </a>  
-        </p>
+      <li>
+        <a class="title" href="<%= article.path %>"><%= article.title %></a>
+      </li>
     <% end %>
+    </ul>
     <p>
       <a class="button" href='<%= "/portfolio" if article[:category] == "portfolio" %><%= "/archives" if article[:category] == "article" %>'>More</a>
     </p>

@@ -20,13 +20,22 @@ If you are familiar with <a title="960 GridSystem" href="http://960.gs">960.gs</
 Nicole recommends separating your CSS that controls the layout of the page from the styles (backgrounds, text colors, borders, drop shadows etc). This is one thing that is rarely done on small sites that can be easy to overlook, but is pretty crucial to building really pluggable classes. We&#8217;re all used to writing widths, font colors, margins and backgrounds all in the same place. <u>Trust the grid</u> as much as possible, and try to let your Headline tags determine your font sizes. On wimgo, we even went so far as to keep structure and style on two different stylesheets. This could theoretically lead to toggling the &#8216;style&#8217; stylesheet for different themes, but mostly it makes sticking to these rules really easy. I haven&#8217;t done it on this site, but it&#8217;s something to consider. Let&#8217;s take a look at an example of what that might look like.</p> 
 <div>structure.css</div> 
  
-<div class="wp_syntax"><div class="code"><pre class="css" style="font-family:monospace;"><span style="color: #ddd;">.mod</span> <span style="color: #ddd;">&#123;</span> <span style="color: #e18627;">display</span><span style="color: #ddd;">:</span> <span style="color: #62a3ca;">block</span><span style="color: #ddd;">;</span> <span style="color: #ddd;">&#125;</span></pre></div></div> 
+<pre class="css">.mod { display: block; }</pre>
  
 <div>And now for the HTML</div> 
-...
+<pre class="html">
+&lt;div class="mod"&gt; 
+  &lt;div class="inner"&gt; 
+    &lt;div class="hd"&gt;.mod (the default)&lt;/div&gt; 
+    &lt;div class="bd"&gt;bd&lt;/div&gt;
+    &lt;div class="ft"&gt;ft&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
 <h3>Mix and match styles</h3> 
 <style type="text/css"> 
+.quarter { width: 25%; }
 .mod .hd, .mod .bd, .mod .ft {
    padding: 3px;
 }
@@ -56,61 +65,61 @@ Nicole recommends separating your CSS that controls the layout of the page from 
    background-color: #62A3CA;
    color: #fff;
 }
-</style> 
+</style>
 <div class="examples"> 
-  <div class="grid_2"> 
+  <div class="quarter f-left"> 
     <div class="mod"> 
-    <div class="inner"> 
-      <div class="hd">.mod (the default)</div> 
-      <div class="bd">bd</div> 
-      <div class="ft">ft</div> 
+      <div class="inner"> 
+        <div class="hd">.mod (the default)</div> 
+        <div class="bd">bd</div> 
+        <div class="ft">ft</div> 
+      </div>
+    </div>
+  </div> 
+  <div class="quarter f-left"> 
+    <div class="mod"> 
+      <div class="inner"> 
+        <div class="hd bg1">.mod, with .hd.bg1</div> 
+        <div class="bd">.bd</div> 
+        <div class="ft bg1">.ft.bg1</div> 
+      </div> 
     </div> 
   </div> 
-</div> 
-<div class="grid_2"> 
-  <div class="mod"> 
-    <div class="inner"> 
-      <div class="hd bg1">.mod, with .hd.bg1</div> 
-      <div class="bd">.bd</div> 
-      <div class="ft bg1">.ft.bg1</div> 
+  <div class="quarter f-left"> 
+    <div class="mod rounded"> 
+      <div class="inner"> 
+        <div class="hd bg2">.mod.rounded, with .hd.bg2</div> 
+        <div class="bd">.bd</div> 
+        <div class="ft">.ft</div> 
+      </div> 
     </div> 
   </div> 
-</div> 
-<div class="grid_2"> 
-  <div class="mod rounded"> 
-    <div class="inner"> 
-      <div class="hd bg2">.mod.rounded, with .hd.bg2</div> 
-      <div class="bd">.bd</div> 
-      <div class="ft">.ft</div> 
-    </div> 
-  </div> 
-</div> 
-<div class="grid_2"> 
-  <div class="mod rounded"> 
-    <div class="inner"> 
-      <div class="hd bg2">.mod.rounded, with .hd.bg2</div> 
-      <div class="bd">.bd</div> 
-      <div class="ft">.ft</div> 
-    </div> 
-  </div> 
-</div> 
-<div class="showhide-toggle showhide-code"><span>Show Code</span></div> 
-<div class="showhide" style="display: none;"> 
-  <div>structure.css</div> 
-  ...
+  <div class="quarter f-left"> 
+    <div class="mod rounded"> 
+      <div class="inner"> 
+        <div class="hd bg2">.mod.rounded, with .hd.bg2</div> 
+        <div class="bd">.bd</div> 
+        <div class="ft">.ft</div> 
+      </div> 
+    </div>
+  </div>
+  <div class="showhide-toggle showhide-code"><span>Show Code</span></div> 
+  <div class="showhide" style="display: none;"> 
+    <div>structure.css</div> 
+    ...
 
-  ::css
-  .style { padding: 10px; }
-  end
+    ::css
+    .style { padding: 10px; }
+    end
  
-  <div>style.css</div> 
-  ...
+    <div>style.css</div> 
+    ...
  
-  <div>And now the HTML</div> 
-   ...
+    <div>And now the HTML</div> 
+     ...
  
-</div> 
-</div> 
+  </div>
+</div>
 Looking around any of Yahoo&#8217;s sites is a great way to get some good ideas on how best (and how not) to mix styles.
 <h3>A note on text styles</h3> 
 Nicole recommends using your headline tags (H1, H2, et cetera) to set the font-size of your text. In theory, if your H2 really is more important than your H3 then it should also reflect that in your visual hierarchy. Things can get a bit tricky here when SEO disagrees with usability, but it&#8217;s worked out well for us. Another thing to consider is using classes for your text colors. Use your styleguide to create classes like &#8216;color1, color2, color3&#8242; or &#8216;color-primary, color-link, color-highlight&#8217; (that way you don&#8217;t have to change our class names if you change colors later) and your blocks of code can be plugged into another section. Just change the headline tag and color class to match the new area and you&#8217;re done in a matter of seconds.

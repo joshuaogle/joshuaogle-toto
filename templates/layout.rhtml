@@ -8,12 +8,10 @@
     <title>Joshua Ogle | <% if @context[:title] %><%= @context[:title] %><% else %>Designer and Developer in Oklahoma City, Oklahoma<% end %></title>
     <meta name="description" content="Designer and Developer in Oklahoma City"> 
     <meta name="author" content="Joshua Ogle"> 
-    <link rel="shortcut icon" href="/images/favicon.ico"> 
-    <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon.png">
     <script type="text/javascript" src="http://use.typekit.com/vbr1nkr.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    <script src="http://code.jquery.com/jquery-1.4.3.min.js" type="text/javascript" charset="UTF-8"></script>
-    <script src="/js/main.js" type="text/javascript" charset="UTF-8"></script>
+    <link rel="shortcut icon" href="/images/favicon.ico"> 
+    <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon.png">
   </head>
   <body<% if (title == "site" || "mnt") && @context[:articles] && @context[:archives] %><%# a horrible way to do this, fix it soon %> class="home"<% end %>>
     <nav class="navigation">
@@ -39,6 +37,8 @@
         <p><span>&copy;</span> Copyright <%= Time.now.year %> Joshua Ogle. All rights reserved unless otherwise noted. Powered by <a href="http://cloudhead.io/toto">toto</a>. You can fork the code <a href="http://github.com/joshuaogle">on Github</a>.</p>
       </div>
     </footer>
-    <%= "x" if ENV['RACK_ENV'] != 'development' %>
+    <script src="http://code.jquery.com/jquery-1.3.2.min.js" type="text/javascript" charset="UTF-8"></script>
+  	<script type="text/javaScript" src="/js/chili/jquery.chili-2.2.js"></script>
+    <script src="/js/main.js" type="text/javascript" charset="UTF-8"></script>
   </body>
 </html>

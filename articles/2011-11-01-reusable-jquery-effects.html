@@ -1,0 +1,31 @@
+title: Reusable jQuery Effects
+date: 2011/11/01
+category: article
+tags: jquery
+
+<p>One of my favorite things about writing javascript is finding way to write less of it. Javascript is one of those things that tends to build up and pretty soon your site is crawling under all its weight.</p>
+<p>That's what I like so much about jQuery (and other frameworks, but jQuery is my weapon of choice), it simplifies a lot of the common scripting that gets done.</p>
+<p>
+<code class="css">
+  /* Reusable Effects */
+  $('[id*=toggle-]').live('click',function() {
+  	var container = $(this).attr("id").replace("toggle-","");
+  	$('#'+container).toggle();
+  	return false;
+  });
+  $('[id*=slide-]').live('click',function() {
+  	var container = $(this).attr("id").replace("slide-","");
+  	$('#'+container).slideToggle();
+  	return false;
+  });
+  $('[id*=fade-]').live('click',function() {
+  	var container = $(this).attr("id").replace("fade-","");
+  	if ($('#'+container) .is(':hidden')) {
+  		$('#'+container).fadeIn();
+  	} else if ($('#'+container) .is(':visible')){
+  		$('#'+container).fadeOut();
+  	}
+  	return false;
+  });
+</code>
+</p>

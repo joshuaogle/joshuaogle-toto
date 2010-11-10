@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	$.getScript("http://disqus.com/forums/joshuaogle/embed.js");
+	ChiliBook.recipeFolder = "/js/chili/"; 
 });
 
 var disqus_developer = 1;
@@ -9,7 +10,6 @@ function twitterCallback(obj) {
 	document.getElementById('twitter_status').innerHTML = obj[0].text;
 	document.getElementById('twitter_status_time').innerHTML = relative_time(obj[0].created_at);
 }
-
 
 function relative_time(time_value) {
   var parsed_date = Date.parse(time_value);
@@ -28,3 +28,24 @@ function relative_time(time_value) {
   return 'about ' + pluralize("day", parseInt(delta / 86400)) + ' ago';
   }
 }
+
+/* Reusable Effects */
+$('[id*=toggle-]').live('click',function() {
+	var container = $(this).attr("id").replace("toggle-","");
+	$('#'+container).toggle();
+	return false;
+});
+$('[id*=slide-]').live('click',function() {
+	var container = $(this).attr("id").replace("slide-","");
+	$('#'+container).slideToggle();
+	return false;
+});
+$('[id*=fade-]').live('click',function() {
+	var container = $(this).attr("id").replace("fade-","");
+	if ($('#'+container) .is(':hidden')) {
+		$('#'+container).fadeIn();
+	} else if ($('#'+container) .is(':visible')){
+		$('#'+container).fadeOut();
+	}
+	return false;
+});

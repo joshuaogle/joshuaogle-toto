@@ -123,13 +123,16 @@ nav { position: fixed; left: 80%; }
 	.body { padding-bottom: 10px; }
 	.body img { max-width:100%; margin: 0 auto 20px; display: block; }
 	
+	pre { display: block; padding: 10px; background: #222; background: rgba(0,0,0,0.15); color: #ccc;
+		border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+	
 	.post-meta { padding: 10px; background: #1a1a1a;
 		border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 		.post-meta p { padding: 0 10px; }
 		.post-meta label { font-size: 80%; color: #444; display: block; padding: 0; }
 		.post-meta label .icon { margin-top: -2px;}
 	
-	#disqus_thread { padding: 5px 10px; background: #1a1a1a;}
+	#disqus_thread { padding: 5px 10px; }
 	#dsq-content button.dsq-button, #dsq-content button.dsq-button-small { background: #333 none; border: none; color: #fff; }
 	#dsq-content .dsq-options, #dsq-content .dsq-request-user-info, #dsq-content #dsq-form-area { padding: 0 10px; }
 	.dsq-item-trackback, #dsq-content #dsq-global-toolbar, #dsq-content .dsq-item-trackback { display: none; }
