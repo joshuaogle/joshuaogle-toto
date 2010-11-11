@@ -6,7 +6,7 @@
 
   <section class="articles">
     <% @articles.select {|a| a[:category] == 'article' }[0...4].each do |article| %>
-      <article class="post">
+      <article>
         <a href="<%= article.path %>">
           <span class="title">
             <%= article.title %>

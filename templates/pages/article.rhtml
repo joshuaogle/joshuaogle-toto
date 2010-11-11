@@ -30,21 +30,34 @@
       
     </section>
 
-    <section class="post-meta clearfix">
-      <% if article[:tags] %>
-        <p class="f-left">
-          <label>Tagged:</label> 
-          <% article[:tags].split(", ").each do |tag| %>
-           <%= tag %><%= ", " unless tag == article[:tags].split(", ").last %>
-          <% end %>
-        </p>
-      <% end %>
+    <section class="post-meta clearfix">  
       <% if article[:client] %>
         <p class="f-left">
           <label>Client:</label>
           <%= article[:client] %>
         </p>
+      <% end %>    
+      <p class="f-left">
+        <label>Posted:</label> 
+        <%= date %>
+      </p>
+      <p class="f-left">
+        <label>Category:</label> 
+        <%= article[:category] %>
+      </p>
+      <% if article[:tags] %>
+        <p class="f-left">
+          <label>Tags:</label> 
+          <% article[:tags].split(", ").each do |tag| %>
+           <%= tag %><%= ", " unless tag == article[:tags].split(", ").last %>
+          <% end %>
+        </p>
       <% end %>
+      <p class="f-right">
+        <label>Share:</label> 
+        <a href="http://twitter.com/?status=<%= title %>%20<%= permalink %>(via%20@joshuaogle)/" target="_new">Twitter</a>/
+        <a href="http://www.facebook.com/share.php?u=<%= permalink %>" target="_new">Facebook</a>
+      </p>
     </section>
 
 

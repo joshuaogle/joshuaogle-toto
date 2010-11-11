@@ -30,7 +30,7 @@ toto = Toto::Server.new do
   set :author, "Joshua Ogle"
   set :disqus, "joshuaogle"
   set :ext, 'html'
-  set :date, lambda {|now| now.strftime("%b #{now.day.ordinal} %Y") }
+  set :date, lambda {|now| now.strftime("%b #{now.day.ordinal}, %Y") }
 end
 
 run toto

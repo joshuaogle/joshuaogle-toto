@@ -3,29 +3,62 @@ date: 2011/11/01
 category: article
 tags: jquery
 
-<p>One of my favorite things about writing javascript is finding way to write less of it. Javascript is one of those things that tends to build up and pretty soon your site is crawling under all its weight.</p>
-<p>That's what I like so much about jQuery (and other frameworks, but jQuery is my weapon of choice), it simplifies a lot of the common scripting that gets done.</p>
-<p>
-<code class="css">
-  /* Reusable Effects */
-  $('[id*=toggle-]').live('click',function() {
-  	var container = $(this).attr("id").replace("toggle-","");
-  	$('#'+container).toggle();
-  	return false;
-  });
-  $('[id*=slide-]').live('click',function() {
-  	var container = $(this).attr("id").replace("slide-","");
-  	$('#'+container).slideToggle();
-  	return false;
-  });
-  $('[id*=fade-]').live('click',function() {
-  	var container = $(this).attr("id").replace("fade-","");
-  	if ($('#'+container) .is(':hidden')) {
-  		$('#'+container).fadeIn();
-  	} else if ($('#'+container) .is(':visible')){
-  		$('#'+container).fadeOut();
-  	}
-  	return false;
-  });
-</code>
-</p>
+<p>One of my favorite things about writing javascript is finding way to write less of it. Javascript is one of those things that tends to build up and pretty soon your site is crawling under all the weight. There's a few things we can do to keep it lean.</p>
+<p>That's what I like so much about <a href="http://jquery.com">jQuery</a> (and other frameworks, but jQuery is my weapon of choice), it simplifies a lot of the common scripting that gets done.</p>
+<p>By combining some clever selectors and an OOCSS-style pattern for naming conventions, we can make adding the most common jQuery effects really simple. For this example, I am using "id" attributes, because it makes the javascript a little simpler and I like reserving id's for javascript (this makes sure I don't remove one thinking it only affects styling, and also makes the script a bit faster). There are two parts here, a container and a toggle.</p>
+<h3>Let's get started</h3>
+<p>First, give your container an id (anything you want), and then give your toggle the same id preceded by "toggle-".</p>
+<p>Here's our HTML:</p>
+<pre class="html">
+<a id="toggle-pangolin" class="button">Fun Fact</a>
+<div id="pangolin">
+  <p>Pangolins are the adorable offspring of a dragon and a tank.</p>
+</div>
+</pre>
+
+<pre class="js">
+/* First we find all elements with an ID that starts with "toggle-" */
+$("[id*=toggle-]").live("click",function() {
+    
+  /* Strip the "toggle-" from the id so we know what we're looking for */
+  var container = $(this).attr("id").replace("toggle-","");
+
+  /* Find the container and perform the effect */
+  $("#"+container).toggle();
+
+  /* Stop the browser from going anywhere */
+  return false;
+  
+});
+</pre>
+<h3>A few more tricks</h3>
+<p>Now that's just a simple show/hide toggle, but what about something a little fancier? We can expand this a little more to make some toggles for slides and fades:</p>
+<pre class="js">
+/* Show/Hide Toggle */
+$("[id*=toggle-]").live("click",function() {
+  var container = $(this).attr("id").replace("toggle-","");
+  $("#"+container).toggle();
+  return false;
+});
+
+/* Slide Toggle */
+$("[id*=slide-]").live("click",function() {
+  var container = $(this).attr("id").replace("slide-","");
+  $("#"+container).slideToggle();
+  return false;
+});
+
+/* Fade Toggle */
+$("[id*=fade-]").live("click",function() {
+  var container = $(this).attr("id").replace("fade-","");
+  if ($("#"+container).is(":visible")) {
+    $("#"+container).fadeOut();
+  } else {
+    $("#"+container).fadeIn();
+  }
+  return false;
+});
+</pre>
+
+<p>There are a few limitations, but nothing that has been a problem for me so far and I think it helps simplify things. Since we are using id's, that means only one toggle per container. Also, if we want to want to do something more sophisticated rather than a simple toggle, it has to be added as an "onClick" to the toggle, or else you're dealing with custom javascript (which is what you were going to have to do before this anyway).</p>
+<p>I'd love to hear what you guys think, and especially any suggestions on how to make these simpler and/or better. Drop a comment below, or send a message over to <a href="http://twitter.com/joshuaogle">@joshuaogle</a> on Twitter.</p>

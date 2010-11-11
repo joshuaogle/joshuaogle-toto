@@ -16,7 +16,7 @@ Styleguide:
 		background: -moz-radial-gradient( center 0%, 0, center 0%, 500, from(#33312f), to(#262524) ) no-repeat;
 		background: -webkit-gradient(radial, center 0%, 0, center 0%, 500, from(#33312f), to(#262524)) no-repeat;
 		background-attachment: fixed; }
-	body { margin: 0; color: #999;
+	body { margin: 0; color: #aaa;
 		line-height: 1.35em; font-weight: normal;
 		font-family: HelveticaNeue-Light, HelveticaNeue, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, Sans-Serif; }
 		body * { cursor: default; }
@@ -28,7 +28,7 @@ Styleguide:
 	
 	.container { text-align: left; display: block; width: 96%; padding: 0 2%; }
 	.content, aside { padding-bottom: 100px; }
-	aside { padding-top: 65px; }
+	aside { padding-top: 45px; }
 		body.home aside { padding-top: 0; }
 	nav, section { padding:  10px 0 20px; }
 	hr { height: 1px; border:0; margin: 0 0 10px 0; }
@@ -56,7 +56,7 @@ Styleguide:
 	ul, li { padding: 0; margin: 0; list-style: none; display: block; }
 	ul { padding-top: 5px; }
 	
-	hgroup { padding: 15px 0 0;}
+	hgroup { padding: 40px 0 10px;}
 	h1, h2, h3, h4, h5, label, #twitter_status_time {
 		font-weight: normal; padding: 0; height: auto; clear: both; margin: 0; color: #eaeaea;
 		font-family: "adelle-1","adelle-2",HelveticaNeue-Light, HelveticaNeue, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, Sans-Serif; font-weight: 300px; padding: 10px 10px 0; line-height: 1.2em; }
@@ -81,11 +81,9 @@ input[type=text],textarea, .dsq-trackback-url { background: #fff; color: #282828
 	border: 2px solid #ccc; padding: 5px 10px; outline: none; }
 
 /** NAV **/
-nav { position: fixed; left: 80%; }
-	body.home nav { position: absolute; z-index: 1; top: 515px; }
 	nav .logo a { height: 50px; width: 50px; display: block; text-indent: -9999px; background: url("/images/logo-feature.png") no-repeat; }
 	nav ul { margin-top: 10px; }
-	nav li a { font-size: 1.4em; font-family: "adelle-1","adelle-2", HelveticaNeue-Light, HelveticaNeue, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, Sans-Serif; display: inline-block; padding-top: .25em; font-size: 120%; margin: .35em 0; }
+	nav li a { font-family: "adelle-1","adelle-2", HelveticaNeue-Light, HelveticaNeue, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, Sans-Serif; display: inline-block; padding-top: .25em; margin: .35em 0; }
 
 /** HOME **/
 .feature { clear: both; width: 100%; height: 480px; background: #2b2a29 url("/images/bg-feature.png") 10% 50px no-repeat; border-bottom: 5px solid #1d1d1d; overflow: hidden; }
@@ -95,13 +93,13 @@ nav { position: fixed; left: 80%; }
 		.feature-text em { display: block; }
 		.feature-text a { display: inline-block; }
 		.feature-caption { display: block; text-align: right; font-size: 12px; line-height: 16px; margin-top: 20px; }
-		.feature-caption label { display: block; padding: 0; }
-	.feature-examples { width: 51%; height: 500px; display: block; float: left; position: relative; z-index: 1; }
-		.example-desktop { position: absolute; z-index: 2; left: 0; bottom: 0; display: block; width: 460px; height: 480px;
+		.feature-caption label { display: block; padding: 0; font-size: 14px; }
+	.feature-examples { width: 51%; height: 480px; display: block; float: left; position: relative; z-index: 1; }
+		.example-desktop { position: absolute; z-index: 2; left: 50%; bottom: 0; display: block; margin-left: -230px; width: 460px; height: 460px;
 			background: url("/images/example-desktop.png") no-repeat; }
 			.example-desktop span { width: 418px; height: 250px; overflow: hidden; display: block; margin: 22px auto; }
 			.example-desktop img { width: 100%; }
-		.example-iphone { position: absolute; z-index: 3; left: 50%; bottom: 0; display: block; width: 80px; height: 220px;
+		.example-iphone { position: absolute; z-index: 3; left: 65%; bottom: 0; display: block; width: 80px; height: 200px;
 			background: url("/images/example-iphone.png") no-repeat; }
 			.example-iphone span { width: 69px; height: 105px; overflow: hidden; display: block; margin: 27px auto 0; }
 			.example-iphone img { height: 100%; }
@@ -120,16 +118,19 @@ nav { position: fixed; left: 80%; }
 	
 /* POST */
 	.date { color: #444; }
-	.body { padding-bottom: 10px; }
 	.body img { max-width:100%; margin: 0 auto 20px; display: block; }
 	
-	pre { display: block; padding: 10px; background: #222; background: rgba(0,0,0,0.15); color: #ccc;
-		border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+	pre { display: block; padding: 10px; margin-bottom: 20px; background: #222; background: rgba(0,0,0,0.15); color: #ccc; white-space: normal;
+		border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; overflow-x:auto; }
+		pre li { width: auto; }
 	
-	.post-meta { padding: 10px; background: #1a1a1a;
+	.post { padding-top: 40px; }
+		.post h1 { padding-bottom: 10px; }
+	.post-meta { padding: 10px; background: #1a1a1a; font-size: .9em;
 		border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 		.post-meta p { padding: 0 10px; }
-		.post-meta label { font-size: 80%; color: #444; display: block; padding: 0; }
+		.post-meta a { color: #ddd; }
+		.post-meta label { font-size: .9em; color: #444; display: block; padding: 0; }
 		.post-meta label .icon { margin-top: -2px;}
 	
 	#disqus_thread { padding: 5px 10px; }
@@ -185,7 +186,7 @@ nav { position: fixed; left: 80%; }
 
 /** FORMS **/
 fieldset { margin: 0; padding:0; }
-.button { background: #e24b00; color: #fff; cursor: pointer; padding: .35em .75em .5em; font-size: 11px;
+.button { background: #e24b00; color: #fff; cursor: pointer; padding: .3em .75em .4em; font-size: 11px;
 	-moz-border-radius: 5px; -webkit-border-radius: 5px; }
 	.button:hover { color: #fff; }
 	.button-small { padding: 0 7px; margin: 2px 0; font-size: 9px; }
@@ -225,9 +226,7 @@ ul.list-links { list-style: disc inside; color: #444; margin-top: 5px; }
 	.feature-text { font-size: 2em; }
 	object, .media { width: 100%; }
 	
-.feature-examples { width: 51%; height: 500px; display: block; float: left; position: relative; z-index: 1; }
-	.feature-examples .example-desktop { left: 0; }
-	.feature-examples .example-iphone { left: 30%; }
+	.feature-examples { width: auto; float: none; }
 	
 	.typekit-badge { display: none !important; }
 }
@@ -235,10 +234,14 @@ ul.list-links { list-style: disc inside; color: #444; margin-top: 5px; }
 
 /*layouts larger than 768px*/
 @media screen and (min-width: 768px) {
+	.wrap { padding-top: 0; }
 	.feature-text { font-size: 2em; }
 	.content { width: 55%; float: left; }
 	aside { width: 23%; margin-left: 2%; float: left; }
-	nav { width: 16%; margin-left: 2%; }
+	nav { position: fixed; top: 35px; left: 80%; width: 100%; width: 16%; margin-left: 2%; }
+		body.home nav { position: absolute; z-index: 1; top: 515px; }
+		nav li { float: none; margin: 0; width: 100%; }
+		nav li a { text-align: left; font-size: 1.2em; }
 	.articles .title { width: 35%; float: left; }
 	.articles .body { width: 65%; float: left; }
 }

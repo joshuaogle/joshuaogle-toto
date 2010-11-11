@@ -1,16 +1,18 @@
 $(document).ready(function() {
 	$.getScript("http://disqus.com/forums/joshuaogle/embed.js");
-	ChiliBook.recipeFolder = "/js/chili/"; 
 });
 
+/* So I can load comments locally for testing */
 var disqus_developer = 1;
 
+/* Grab my twitter feed  to display latest tweet */
 function twitterCallback(obj) {
 	var id = obj[0].user.id;
 	document.getElementById('twitter_status').innerHTML = obj[0].text;
 	document.getElementById('twitter_status_time').innerHTML = relative_time(obj[0].created_at);
 }
 
+/* Gets the time relative to todays date */
 function relative_time(time_value) {
   var parsed_date = Date.parse(time_value);
   var relative_to = (arguments.length > 1) ? arguments[1] : new Date();
@@ -29,7 +31,7 @@ function relative_time(time_value) {
   }
 }
 
-/* Reusable Effects */
+/* Reusable jQuery Effects */
 $('[id*=toggle-]').live('click',function() {
 	var container = $(this).attr("id").replace("toggle-","");
 	$('#'+container).toggle();
