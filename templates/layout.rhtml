@@ -12,6 +12,7 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <link rel="shortcut icon" href="/images/favicon.ico"> 
     <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon.png">
+    <%= @context[:extrahead] %>
   </head>
   <body<% if (title == "site" || "mnt") && @context[:articles] && @context[:archives] %><%# a horrible way to do this, fix it soon %> class="home"<% end %>>
     <nav class="navigation">
