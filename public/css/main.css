@@ -127,6 +127,7 @@ input[type=text],textarea, .dsq-trackback-url { background: #fff; color: #282828
 		pre li { width: auto; }
 	
 	.post { padding-top: 40px; }
+		.articles .post { padding-top: 0; }
 		.post h1 { padding-bottom: 10px; }
 	.post-meta { padding: 10px; background: #1a1a1a; font-size: .9em;
 		border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
