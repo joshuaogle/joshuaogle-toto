@@ -16,6 +16,19 @@
   	<script type="text/javaScript" src="/js/chili/jquery.chili-2.2.js"></script>
     <script src="/js/main.js" type="text/javascript" charset="UTF-8"></script>
     <%= @context[:extrahead] %>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-15100661-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
   </head>
   <body<% if (title == "site" || "mnt") && @context[:articles] && @context[:archives] %><%# a horrible way to do this, fix it soon %> class="home"<% end %>>
     <nav class="navigation">

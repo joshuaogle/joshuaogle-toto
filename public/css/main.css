@@ -45,11 +45,12 @@ Styleguide:
 	.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;	}
 	
 /** TYPOGRAPHY **/
-	a { color: #e24b00; font-weight: normal; text-decoration: none; padding: 0 .2em; margin: 0 -.2em;  -webkit-transition: all .15s linear; transition: all .15s linear; }
+	a { color: #bf310a; font-weight: normal; text-decoration: none; padding: 0 .2em; margin: 0 -.2em;  -webkit-transition: all .15s linear; transition: all .15s linear; }
 		a, a * { cursor:pointer; }
 		a:hover { color: #fff; text-decoration: none; background: #1d1d1d;
 			border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 		a:active { outline: 0 none; position: relative; top: 1px; }
+		a[href$=".pdf"]:after{ position: relative; content: "\00a0"; background: url("/images/pdf.gif") no-repeat; margin-left: 5px; height: 16px; width: 16px; display: inline-block; vertical-align: middle;}
 		
 	em { color: #ddd; font-style: normal; }
 	
@@ -187,7 +188,7 @@ input[type=text],textarea, .dsq-trackback-url { background: #fff; color: #282828
 
 /** FORMS **/
 fieldset { margin: 0; padding:0; }
-.button { background: #e24b00; color: #fff; cursor: pointer; padding: .3em .75em .4em; font-size: 11px;
+.button { background: #bf310a; color: #fff; cursor: pointer; padding: .3em .75em .4em; font-size: 11px;
 	-moz-border-radius: 5px; -webkit-border-radius: 5px; }
 	.button:hover { color: #fff; }
 	.button-small { padding: 0 7px; margin: 2px 0; font-size: 9px; }
@@ -203,7 +204,7 @@ footer { clear: both; height: 50px; }
 
 html, body { height: 100%; }
 /** Sticky Footer **/
-	.wrap { min-height: 100%; height: auto !important; height: 100%; overflow: auto; margin-bottom: -50px; border-left: 10px solid #4d6d80; }
+	.wrap { min-height: 100%; height: auto !important; height: 100%; overflow: auto; margin-bottom: -50px; border-left: 10px solid #80412d; }
 
 /* PAGES */
 .about img { max-width: 40%; }
@@ -215,7 +216,7 @@ ul.list-links { list-style: disc inside; color: #444; margin-top: 5px; }
 
 
 /*layouts smaller than 600px, iPhone and mobiles*/
-@media handheld and (max-width: 480px), screen and (max-device-width: 480px), only screen and (max-device-width: 480px), screen and (max-width: 600px) {
+@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 600px) {
 	.content, aside, nav, .feature-text { width: auto; margin: 0; float: none; }
 	.content { padding-bottom: 50px; }
 	.wrap { padding-top: 120px; }
@@ -236,6 +237,7 @@ ul.list-links { list-style: disc inside; color: #444; margin-top: 5px; }
 /* iPad Portrait */
 @media screen and (min-width: 768px) {
 	.wrap { padding-top: 0; }
+	.example-desktop { left:0; margin-left:0; }
 	.content { width: 65%; float: left; }
 	aside { width: 33%; margin-left: 2%; margin-top: 220px; float: left; }
 	nav, body.home nav { position: absolute; top: 10px; left: 65%; width: 100%; width: 16%; margin-left: 2%; float: left; }
@@ -261,7 +263,7 @@ ul.list-links { list-style: disc inside; color: #444; margin-top: 5px; }
 
 /* Larger displays */
 @media screen and (min-width: 1200px) {
-.feature-text { font-size: 3em; }
+	.feature-text { font-size: 3em; }
 }
 
 /* @end */
