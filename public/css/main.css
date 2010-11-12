@@ -216,7 +216,7 @@ ul.list-links { list-style: disc inside; color: #444; margin-top: 5px; }
 
 
 /*layouts smaller than 600px, iPhone and mobiles*/
-@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 600px) {
+@media handheld and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 768px) {
 	.content, aside, nav, .feature-text { width: auto; margin: 0; float: none; }
 	.content { padding-bottom: 50px; }
 	.wrap { padding-top: 120px; }
@@ -257,6 +257,7 @@ ul.list-links { list-style: disc inside; color: #444; margin-top: 5px; }
 @media screen and (min-width: 1024px) {
 	nav, body.home nav { left: 80%; }
 		body.home nav { top: 520px; }
+	.example-desktop { left: 50%; margin-left:-230px; }
 	.content { width: 55%; float: left; }
 	aside { width: 23%; margin-left: 2%; margin-top: 0; float: left; }
 }
