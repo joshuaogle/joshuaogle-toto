@@ -67,10 +67,10 @@ Styleguide:
 	h5, label { font-size: 1em; }
 	hgroup h2, hgroup h3, hgroup h4 { padding-top: 0; }
 	h1 span, h2 span, h3 span, h4 span, .title span { font-weight: 300; font-size: 75%; white-space: nowrap; }
-	aside h2 { font-size: 1.2em; line-height: 1.2em; padding-top: 0.9em; }
-	aside h3 { font-size: 1.0em; line-height: 1.0em; padding-top: 1.1em; }
-	aside h4 { font-size: 0.8em; line-height: 0.8em; padding-top: 1.2em; }
-	.title { font-size: 1.8em; line-height: 1.2em; font-family: "adelle-1","adelle-2", HelveticaNeue-Light, HelveticaNeue, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, Sans-Serif; display: inline-block; }
+	aside h2 { font-size: 1.0em; line-height: 1.0em; padding-top: 1.2em; }
+	aside h3 { font-size: 0.8em; line-height: 0.8em; padding-top: 1.4em; }
+	aside h3 { font-size: 0.7em; line-height: 0.7em; padding-top: 1.5em; }
+	.title { font-size: 1.2em; line-height: 1.5em; font-family: "adelle-1","adelle-2", HelveticaNeue-Light, HelveticaNeue, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, Sans-Serif; display: inline-block; }
 	
 	p { padding: 0 10px 10px; margin: 0; clear: both; }
 	
@@ -83,13 +83,14 @@ input[type=text],textarea, .dsq-trackback-url { background: #fff; color: #282828
 /** NAV **/
 	nav .logo a { height: 50px; width: 50px; display: block; text-indent: -9999px; background: url("/images/logo-feature.png") no-repeat; }
 	nav ul { margin-top: 10px; }
-	nav li a { font-family: "adelle-1","adelle-2", HelveticaNeue-Light, HelveticaNeue, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, Sans-Serif; display: inline-block; padding-top: .25em; margin: .35em 0; }
+	nav li a { font-family: "adelle-1","adelle-2", HelveticaNeue-Light, HelveticaNeue, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
+		display: inline-block; padding-top: .25em; margin: .25em 0; }
 
 /** HOME **/
 .feature { clear: both; width: 100%; height: 480px; background: #2b2a29 url("/images/bg-feature.png") 10% 50px no-repeat; border-bottom: 5px solid #1d1d1d; overflow: hidden; }
 	.feature .logo { height: 50px; width: 50px; display: block; margin: 0 auto 20px; text-indent: -9999px; background: url("/images/logo-feature.png") no-repeat; }
-	.feature-text { font-size: 3em; line-height: 1.2em; color: #666; text-shadow: -2px 2px #262524; font-family: "adelle-1","adelle-2", HelveticaNeue-Light, HelveticaNeue, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
-		float: left; display: block; width: 45%; margin: 1em 2% 0; }
+	.feature-text { font-size: 2.5em; line-height: 1.2em; color: #666; text-shadow: -2px 2px #262524; float: left; display: block; width: 45%; margin: 1.5em 2% 0;
+		font-family: "adelle-1","adelle-2", HelveticaNeue-Light, HelveticaNeue, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, Sans-Serif; }
 		.feature-text em { display: block; }
 		.feature-text a { display: inline-block; }
 		.feature-caption { display: block; text-align: right; font-size: 12px; line-height: 16px; margin-top: 20px; }
@@ -117,7 +118,7 @@ input[type=text],textarea, .dsq-trackback-url { background: #fff; color: #282828
 		.articles a:hover, .articles a:hover .body { color: #fff; }
 	
 /* POST */
-	.date { color: #444; }
+	.date { color: #555; }
 	.body img { max-width:100%; margin: 0 auto 20px; display: block; }
 	
 	pre { display: block; padding: 10px; margin-bottom: 20px; background: #222; background: rgba(0,0,0,0.15); color: #ccc; white-space: normal;
@@ -166,7 +167,7 @@ input[type=text],textarea, .dsq-trackback-url { background: #fff; color: #282828
 	
 .social-icons { margin: 0 10px; }
 	.social-icons li { float: left; padding: 0; margin: 0 0 10px 5px; z-index: 1; overflow: visible; }
-	.social-icons li, .social-icons a { height: 34px; width: 38px; display:block; position: relative; }
+	.social-icons li, .social-icons a { height: 34px; width: 34px; display:block; position: relative; }
 	.social-icons a { text-indent: -9999px; background: url("/images/social-icons.png") no-repeat; }
 	.social-icons a.social-icon-facebook { background-position: -40px 0; }
 	.social-icons a.social-icon-linkedin { background-position: -80px 0; }
@@ -214,14 +215,14 @@ ul.list-links { list-style: disc inside; color: #444; margin-top: 5px; }
 
 
 /*layouts smaller than 600px, iPhone and mobiles*/
-@media handheld and (max-width: 480px), screen and (max-device-width: 480px), only screen and (max-device-width: 480px), screen and (max-width: 600px), screen and (max-width: 960px) {
+@media handheld and (max-width: 480px), screen and (max-device-width: 480px), only screen and (max-device-width: 480px), screen and (max-width: 600px) {
 	.content, aside, nav, .feature-text { width: auto; margin: 0; float: none; }
 	.content { padding-bottom: 50px; }
-	nav, body.home nav { position: absolute; top: 0; left: 20px; right: 0; float: none;  }
 	.wrap { padding-top: 120px; }
+	nav, body.home nav { position: absolute; top: 0; left: 20px; right: 0; }
 	nav .logo a { display: block; margin: 0 auto; }
-		nav li { float: left; margin: 0 1%; width: 18%; }
-		nav li a { display: block; text-align: center; font-size: .9em;}
+		nav li { float: left; margin: 0 1%; width: 23%; }
+		nav li a { display: block; text-align: center; font-size: 1em;}
 	.feature { height: auto; }
 	.feature-text { font-size: 2em; }
 	object, .media { width: 100%; }
@@ -232,27 +233,35 @@ ul.list-links { list-style: disc inside; color: #444; margin-top: 5px; }
 }
 
 
-/*layouts larger than 768px*/
+/* iPad Portrait */
 @media screen and (min-width: 768px) {
 	.wrap { padding-top: 0; }
-	.feature-text { font-size: 2em; }
-	.content { width: 55%; float: left; }
-	aside { width: 23%; margin-left: 2%; float: left; }
-	nav { position: fixed; top: 35px; left: 80%; width: 100%; width: 16%; margin-left: 2%; }
-		body.home nav { position: absolute; z-index: 1; top: 515px; }
+	.content { width: 65%; float: left; }
+	aside { width: 33%; margin-left: 2%; margin-top: 220px; float: left; }
+	nav, body.home nav { position: absolute; top: 10px; left: 65%; width: 100%; width: 16%; margin-left: 2%; float: left; }
+		body.home nav { top: 520px; }
 		nav li { float: none; margin: 0; width: 100%; }
-		nav li a { text-align: left; font-size: 1.2em; }
+		nav li a { text-align: left; font-size: 1.35em; }
+		nav .logo a { margin: 0; }
 	.articles .title { width: 35%; float: left; }
 	.articles .body { width: 65%; float: left; }
 }
-
-/*Just iPad*/
+/*Just iPad */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 	.typekit-badge { display: none !important; }
 }
 
+/* iPad Landscape & Netbooks */
+@media screen and (min-width: 1024px) {
+	nav, body.home nav { left: 80%; }
+		body.home nav { top: 520px; }
+	.content { width: 55%; float: left; }
+	aside { width: 23%; margin-left: 2%; margin-top: 0; float: left; }
+}
+
+/* Larger displays */
 @media screen and (min-width: 1200px) {
-	.feature-text { font-size: 3em; }
+.feature-text { font-size: 3em; }
 }
 
 /* @end */
