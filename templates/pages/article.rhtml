@@ -22,7 +22,7 @@
     
       <% if article[:desktop] %>
         <% article[:desktop].split(", ").each do |gallery| %>
-          <img src="/portfolio/desktop/<%= gallery %>" width="100%">
+          <img src="/portfolio/desktop/<%= gallery %>" max-width="100%">
         <% end %>
       <% end %>
         
