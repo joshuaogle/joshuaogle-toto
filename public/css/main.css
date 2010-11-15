@@ -30,7 +30,7 @@ Styleguide:
 	.content, aside { padding-bottom: 100px; }
 	aside { padding-top: 45px; }
 		body.home aside { padding-top: 0; }
-	nav, section { padding:  10px 0 20px; }
+	nav, section, article-content { padding:  10px 0 20px; }
 	hr { height: 1px; border:0; margin: 0 0 10px 0; }
 	.content hr { background: rgba(0,0,0,0.1); -moz-box-shadow: 0 1px rgba(255,255,255,1); -webkit-box-shadow: 0 1px rgba(255,255,255,1); }
 	.showhide-toggle { clear: both; display: block; margin-top: 10px; font-size: 80%; color: #888; cursor: pointer; }
@@ -55,7 +55,7 @@ Styleguide:
 		
 	em { color: #ddd; font-style: normal; }
 	
-	ul, li { padding: 0; margin: 0; list-style: none; display: block; }
+	ul, li { padding: 0; margin: 0; list-style: none; display: block; position: relative; z-index: 1; }
 	ul { padding-top: 5px; }
 	
 	hgroup { padding: 40px 0 10px;}
@@ -74,8 +74,8 @@ Styleguide:
 	aside h3 { font-size: 0.7em; line-height: 0.7em; padding-top: 1.5em; }
 	.title { font-size: 1.2em; line-height: 1.5em; font-family: "adelle-1","adelle-2", HelveticaNeue-Light, HelveticaNeue, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, Sans-Serif; display: inline-block; }
 	
-	p { padding: 0 10px 10px; margin: 0; clear: both; }
-	
+	p { padding: 0 10px 10px; margin: 0; }
+		ul p { padding: 0 10px 5px; }
 
 /** FORMS **/
 input[type=text],textarea, .dsq-trackback-url { background: #fff; color: #282828; font-size: 13px !important;
@@ -107,8 +107,10 @@ input[type=text],textarea, .dsq-trackback-url { background: #fff; color: #282828
 			.example-iphone span { width: 69px; height: 105px; overflow: hidden; display: block; margin: 27px auto 0; }
 			.example-iphone img { height: 100%; }
 	
-	.articles .gallery { height: 150px; border: 5px solid #1d1d1d; display: block; overflow: hidden; }
-		.articles .gallery img { width: 100%; padding: 0; margin-top: -10%; }
+	.articles .gallery { border: 5px solid #1d1d1d; display: block; overflow: hidden; }
+		body.home .articles .gallery { height: 150px; }
+		.articles .gallery img { width: 100%; padding: 0; margin: 0; }
+			body.home .articles .gallery img { margin-top: -10%; }
 
 /* ARTICLES LIST */
 .articles { overflow: visible; }
@@ -144,6 +146,8 @@ input[type=text],textarea, .dsq-trackback-url { background: #fff; color: #282828
 	
 	.related .title { font-size: 100%; }
 	
+	.bar { position: absolute; z-index: 0; left: 0; top: 0; bottom: 0; width: 100%; margin-bottom: 2px; background: #1d1d1d; background: rgba(0,0,0,0.15); }
+	.bar-text { position: relative; z-index: 1; }
 
 /** GALLERY **/
 .images { width: 600px; padding: 0; margin: 30px auto; text-align: center; -moz-box-shadow: none; -webkit-box-shadow: none; }
