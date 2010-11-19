@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteRule (.*)$ http://dl.getdropbox.com/u/joshuaogle/site/$1 [L,QSA]
+</IfModule>

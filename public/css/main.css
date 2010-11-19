@@ -46,7 +46,7 @@ Styleguide:
 	.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;	}
 	
 /** TYPOGRAPHY **/
-	a { color: #bf310a; font-weight: normal; text-decoration: none; padding: 0 .2em; margin: 0 -.2em;  -webkit-transition: all .15s linear; transition: all .15s linear; }
+	a { color: #bf370a; font-weight: normal; text-decoration: none; padding: 0 .2em; margin: 0 -.2em;  -webkit-transition: all .15s linear; transition: all .15s linear; }
 		a, a * { cursor:pointer; }
 		a:hover { color: #fff; text-decoration: none; background: #1d1d1d;
 			border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
@@ -194,7 +194,7 @@ input[type=text],textarea, .dsq-trackback-url { background: #fff; color: #282828
 
 /** FORMS **/
 fieldset { margin: 0; padding:0; }
-.button { background: #bf310a; color: #fff; cursor: pointer; padding: .3em .75em .4em; font-size: 11px;
+.button { background: #bf370a; color: #fff; cursor: pointer; padding: .3em .75em .4em; font-size: 11px;
 	-moz-border-radius: 5px; -webkit-border-radius: 5px; }
 	.button:hover { color: #fff; }
 	.button-small { padding: 0 7px; margin: 2px 0; font-size: 9px; }
