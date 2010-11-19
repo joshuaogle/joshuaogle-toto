@@ -10,19 +10,19 @@
 
       <% if article[:logo] %>
         <% article[:logo].split(", ").each do |gallery| %>
-          <img src="/portfolio/logo/<%= gallery %>">
+          <img src="<%= $dropbox %>/portfolio/logo/<%= gallery %>">
         <% end %>
       <% end %>
 
       <% if article[:mobile] %>
         <% article[:mobile].split(", ").each do |gallery| %>
-          <img src="/portfolio/mobile/<%= gallery %>" width="50%">
+          <img src="<%= $dropbox %>/portfolio/mobile/<%= gallery %>" width="50%">
         <% end %>
       <% end %>
     
       <% if article[:desktop] %>
         <% article[:desktop].split(", ").each do |gallery| %>
-          <img src="/portfolio/desktop/<%= gallery %>" max-width="100%">
+          <img src="<%= $dropbox %>/portfolio/desktop/<%= gallery %>" max-width="100%">
         <% end %>
       <% end %>
         

@@ -1,5 +1,0 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine on
-  RewriteRule ^uploads/(.*)$ http://dl.getdropbox.com/u/916710/site/uploads/$1 [L,QSA]
-  RewriteRule ^portfolio/(.*)$ http://dl.getdropbox.com/u/916710/site/portfolio/$1 [L,QSA]
-</IfModule>

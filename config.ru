@@ -12,6 +12,8 @@ end
 # Create and configure a toto instance
 #
 
+$dropbox = "http://dl.getdropbox.com/u/916710/site"
+
 toto = Toto::Server.new do
 
   # Add your settings here

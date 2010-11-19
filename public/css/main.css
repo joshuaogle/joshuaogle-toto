@@ -51,7 +51,7 @@ Styleguide:
 		a:hover { color: #fff; text-decoration: none; background: #1d1d1d;
 			border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
 		a:active { outline: 0 none; position: relative; top: 1px; }
-		a[href$=".pdf"]:after{ position: relative; content: "\00a0"; background: url("/images/pdf.gif") no-repeat; margin-left: 5px; height: 16px; width: 16px; display: inline-block; vertical-align: middle;}
+		a[href$=".pdf"]:after{ position: relative; content: "\00a0"; background: url("http://dl.getdropbox.com/u/916710/site/images/pdf.gif") no-repeat; margin-left: 5px; height: 16px; width: 16px; display: inline-block; vertical-align: middle;}
 		
 	em { color: #ddd; font-style: normal; }
 	
@@ -83,14 +83,14 @@ input[type=text],textarea, .dsq-trackback-url { background: #fff; color: #282828
 	border: 2px solid #ccc; padding: 5px 10px; outline: none; }
 
 /** NAV **/
-	nav .logo a { height: 50px; width: 50px; display: block; text-indent: -9999px; background: url("/images/logo-feature.png") no-repeat; }
+	nav .logo a { height: 50px; width: 50px; display: block; text-indent: -9999px; background: url("http://dl.getdropbox.com/u/916710/site/images/logo-feature.png") no-repeat; }
 	nav ul { margin-top: 10px; }
 	nav li a { font-family: "adelle-1","adelle-2", HelveticaNeue-Light, HelveticaNeue, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
 		display: inline-block; padding-top: .25em; margin: .25em 0; }
 
 /** HOME **/
-.feature { clear: both; width: 100%; height: 480px; background: #2b2a29 url("/images/bg-feature.png") 10% 50px no-repeat; border-bottom: 5px solid #1d1d1d; overflow: hidden; }
-	.feature .logo { height: 50px; width: 50px; display: block; margin: 0 auto 20px; text-indent: -9999px; background: url("/images/logo-feature.png") no-repeat; }
+.feature { clear: both; width: 100%; height: 480px; background: #2b2a29 url("http://dl.getdropbox.com/u/916710/site/images/bg-feature.png") 10% 50px no-repeat; border-bottom: 5px solid #1d1d1d; overflow: hidden; }
+	.feature .logo { height: 50px; width: 50px; display: block; margin: 0 auto 20px; text-indent: -9999px; background: url("http://dl.getdropbox.com/u/916710/site/images/logo-feature.png") no-repeat; }
 	.feature-text { font-size: 2.5em; line-height: 1.2em; color: #666; text-shadow: -2px 2px #262524; float: left; display: block; width: 45%; margin: 1.5em 2% 0;
 		font-family: "adelle-1","adelle-2", HelveticaNeue-Light, HelveticaNeue, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, Sans-Serif; }
 		.feature-text em { display: block; }
@@ -99,11 +99,11 @@ input[type=text],textarea, .dsq-trackback-url { background: #fff; color: #282828
 		.feature-caption label { display: block; padding: 0; font-size: 11px; }
 	.feature-examples { width: 51%; height: 480px; display: block; float: left; position: relative; z-index: 1; }
 		.example-desktop { position: absolute; z-index: 2; left: 50%; bottom: 0; display: block; margin-left: -230px; width: 460px; height: 460px;
-			background: url("/images/example-desktop.png") no-repeat; }
+			background: url("http://dl.getdropbox.com/u/916710/site/images/example-desktop.png") no-repeat; }
 			.example-desktop span { width: 418px; height: 250px; overflow: hidden; display: block; margin: 22px auto; }
 			.example-desktop img { width: 100%; }
 		.example-iphone { position: absolute; z-index: 3; left: 65%; bottom: 0; display: block; width: 80px; height: 200px;
-			background: url("/images/example-iphone.png") no-repeat; }
+			background: url("http://dl.getdropbox.com/u/916710/site/images/example-iphone.png") no-repeat; }
 			.example-iphone span { width: 69px; height: 105px; overflow: hidden; display: block; margin: 27px auto 0; }
 			.example-iphone img { height: 100%; }
 	
@@ -155,12 +155,12 @@ input[type=text],textarea, .dsq-trackback-url { background: #fff; color: #282828
 
 /** SIDEBAR **/
 .icon { display:block; width:20px; margin: 1px 5px 0 0; height:17px; float:left; vertical-align: middle; }
-	.icon.icon-date { background: url("/images/icon_date.png") top center no-repeat; }
-	.icon.icon-comments { background: url("/images/icon_notes.png") top center no-repeat; }
-	.icon.icon-tags { background: url("/images/icon_tags.png") top center no-repeat; }
-	.icon.icon-share { background: url("/images/icon_share.png") top center no-repeat; }
-	.icon.icon-ask { background: url("/images/icon_ask.png") top center no-repeat; }
-	.icon.icon-notes { background: url("/images/icon_notes.png") top center no-repeat; }
+	.icon.icon-date { background: url("http://dl.getdropbox.com/u/916710/site/images/icon_date.png") top center no-repeat; }
+	.icon.icon-comments { background: url("http://dl.getdropbox.com/u/916710/site/images/icon_notes.png") top center no-repeat; }
+	.icon.icon-tags { background: url("http://dl.getdropbox.com/u/916710/site/images/icon_tags.png") top center no-repeat; }
+	.icon.icon-share { background: url("http://dl.getdropbox.com/u/916710/site/images/icon_share.png") top center no-repeat; }
+	.icon.icon-ask { background: url("http://dl.getdropbox.com/u/916710/site/images/icon_ask.png") top center no-repeat; }
+	.icon.icon-notes { background: url("http://dl.getdropbox.com/u/916710/site/images/icon_notes.png") top center no-repeat; }
 	
 .box, .social-icons li { background: #1c1b1a; margin: 10px 0 0 10px; padding: 10px; word-wrap: break-word; position: relative;
 	border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
@@ -168,14 +168,14 @@ input[type=text],textarea, .dsq-trackback-url { background: #fff; color: #282828
 	
 .projects { overflow: hidden; }
 	.projects .logo-keynotes, .projects .logo-brightbit, .projects .logo-wimgo { float: left; margin: 0 5px 0 0; display: block; text-indent: -9999px; }	
-	.projects .logo-keynotes { width: 100px; height: 67px; background: url("/images/keynotes.png") no-repeat; }
-	.projects .logo-brightbit { width: 100px; height: 40px; margin-top: 35px; background: url("/images/brightbit.png") no-repeat; }
-	.projects .logo-wimgo { width: 100px; height: 36px; margin-top: 29px;  background: url("/images/wimgo.png") no-repeat; }
+	.projects .logo-keynotes { width: 100px; height: 67px; background: url("http://dl.getdropbox.com/u/916710/site/images/keynotes.png") no-repeat; }
+	.projects .logo-brightbit { width: 100px; height: 40px; margin-top: 35px; background: url("http://dl.getdropbox.com/u/916710/site/images/brightbit.png") no-repeat; }
+	.projects .logo-wimgo { width: 100px; height: 36px; margin-top: 29px;  background: url("http://dl.getdropbox.com/u/916710/site/images/wimgo.png") no-repeat; }
 	
 .social-icons { margin: 0 10px; }
 	.social-icons li { float: left; padding: 0; margin: 0 0 10px 5px; z-index: 1; overflow: visible; }
 	.social-icons li, .social-icons a { height: 34px; width: 34px; display:block; position: relative; }
-	.social-icons a { text-indent: -9999px; background: url("/images/social-icons.png") no-repeat; }
+	.social-icons a { text-indent: -9999px; background: url("http://dl.getdropbox.com/u/916710/site/images/social-icons.png") no-repeat; }
 	.social-icons a.social-icon-facebook { background-position: -40px 0; }
 	.social-icons a.social-icon-linkedin { background-position: -80px 0; }
 	.social-icons a.social-icon-flickr { background-position: -120px 0; }
@@ -185,9 +185,9 @@ input[type=text],textarea, .dsq-trackback-url { background: #fff; color: #282828
 	.social-icon-twitter:after { content:"\00a0"; position: absolute; z-index: 2; left: 12px; bottom: -10px; height:0; width:0;
 		border-color:  #1a1a1a transparent transparent #1a1a1a; border-style:solid; border-width:5px 7px;
 		-moz-box-shadow: -1px 0 0 rgba(255,255,255,.1); -webkit-box-shadow: -1px 0 0 rgba(255,255,255,.1); }
-.profile-picture { width: 200px; height: 200px; display: block; background: url("/images/profile.png");
+.profile-picture { width: 200px; height: 200px; display: block; background: url("http://dl.getdropbox.com/u/916710/site/images/profile.png");
 	-moz-box-shadow: 0 2px 4px rgba(0,0,0,0.25); -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.25); }
-	.home .profile-picture { width: 100px; height: 100px; background: url("/images/profile2.jpg"); }
+	.home .profile-picture { width: 100px; height: 100px; background: url("http://dl.getdropbox.com/u/916710/site/images/profile2.jpg"); }
 	
 .tweet { padding-top: 10px; }
 	#twitter_status_time {font-size: 12px; padding: 0; color: #444; font-style:normal; }

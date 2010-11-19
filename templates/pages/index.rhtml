@@ -9,8 +9,8 @@
     </span>
   </span>
   <div class="feature-examples">
-    <div class="example-desktop"><span><img src="/portfolio/desktop/20101109001.png"></span></div>
-    <div class="example-iphone"><span><img src="/images/example-iphone-keynotes.png"></span></div>
+    <div class="example-desktop"><span><img src="<%= $dropbox %>/portfolio/desktop/20101109001.png"></span></div>
+    <div class="example-iphone"><span><img src="<%= $dropbox %>/images/example-iphone-keynotes.png"></span></div>
   </div>
 </section>
 
@@ -31,11 +31,11 @@
                 <% if article.category == "portfolio" %>
                   <span class="gallery">
                       <% if article[:desktop] %>
-                        <img src="/portfolio/desktop/<%= article[:desktop].split(", ").first %>">
+                        <img src="<%= $dropbox %>/portfolio/desktop/<%= article[:desktop].split(", ").first %>">
                       <% elsif article[:logo] %>
-                        <img src="/portfolio/logo/<%= article[:logo].split(", ").first %>">
+                        <img src="<%= $dropbox %>/portfolio/logo/<%= article[:logo].split(", ").first %>">
                       <% elsif article[:mobile]%>
-                        <img src="/portfolio/mobile/<%= article[:mobile].split(", ").first %>">
+                        <img src="<%= $dropbox %>/portfolio/mobile/<%= article[:mobile].split(", ").first %>">
                       <% end %>
                   </span>
                 <% end %>                  
