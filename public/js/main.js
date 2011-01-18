@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	$.getScript("http://disqus.com/forums/joshuaogle/embed.js");
 });
-
 /* So I can load comments locally for testing */
 var disqus_developer = 1;
 

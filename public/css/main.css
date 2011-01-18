@@ -178,8 +178,8 @@ input[type=text],textarea, .dsq-trackback-url { background: #fff; color: #282828
 	.social-icons a { text-indent: -9999px; background: url("http://dl.getdropbox.com/u/916710/site/images/social-icons.png") no-repeat; }
 	.social-icons a.social-icon-facebook { background-position: -40px 0; }
 	.social-icons a.social-icon-linkedin { background-position: -80px 0; }
-	.social-icons a.social-icon-flickr { background-position: -120px 0; }
-	.social-icons a.social-icon-delicious { background-position: -160px 0; }
+	.social-icons a.social-icon-dribbble { background-position: -120px 0; }
+	.social-icons a.social-icon-forrst { background-position: -160px 0; }
 	.social-icons a.social-icon-rdio { background-position: -200px 0; }
 	.social-icons li.social-icon-twitter { background: #1a1a1a; }
 	.social-icon-twitter:after { content:"\00a0"; position: absolute; z-index: 2; left: 12px; bottom: -10px; height:0; width:0;
