@@ -22,6 +22,7 @@ toto = Toto::Server.new do
   # set :author,    "Joshua Ogle"                             # blog author
     set :title,     Dir.pwd.split('/').last                   # site title
   # set :root,      "index"                                   # page to load on /
+    set :url,       "http://joshuaogle.com"                   # root URL of the site
   # set :date,      lambda {|now| now.strftime("%b/%m/%Y") }  # date format for articles
   # set :markdown,  :smart                                    # use markdown + smart-mode
   # set :disqus,    "joshuaogle"                              # disqus id, or false
